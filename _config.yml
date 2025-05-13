@@ -1,51 +1,93 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# -----------------------------------------------------------------------------
+# Visionary Cross Project – Jekyll Configuration
+# -----------------------------------------------------------------------------
 
+# Site Identity
 title: Visionary Cross Project 3.0
 email: jocelyn.mcknight@uleth.ca
-description: >- # this means to ignore newlines until "baseurl:"
-  The thid attempt
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: >-
+  Visionary Cross is a multimedia edition and archive—a critical edition, scholarly study,
+  and textual archive of the Old English Visionary Cross Tradition. The Visionary Cross Project
+  is an international, multidisciplinary research initiative focused on creating a new kind
+  of digital archive and edition of texts and objects associated with the Visionary Cross tradition
+  in Anglo-Saxon England.
 
-# Build settings
+  ISTI-CNR collaborated with project partners in two main activities: the acquisition and processing
+  of 3D representations of two important stone crosses (Ruthwell and Bewcastle), and the creation
+  of a web-accessible "digital edition" of the Cross, available to both the general public and scholars.
+
+footer_text: >
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
+  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+# Languages and Branding
+lang: en
+icon: ico.jpg # Add this image to your assets for favicon
+baseurl: "" # e.g., /project if deployed under a subpath
+url: ""     # e.g., https://yourdomain.com
+back_to_top: true
+
+# Display settings
+navbar_fixed: true
+footer_fixed: true
+search_enabled: true
+
+# Layout
+max_width: 930px
+
+# -----------------------------------------------------------------------------
+# Theme and Plugins
+# -----------------------------------------------------------------------------
+
 theme: minima
 plugins:
   - jekyll-feed
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# -----------------------------------------------------------------------------
+# Analytics & Verification
+# -----------------------------------------------------------------------------
+
+google_analytics: # add your measurement ID (e.g. G-XXXXXXX)
+enable_google_analytics: true
+
+# -----------------------------------------------------------------------------
+# Optional Features
+# -----------------------------------------------------------------------------
+
+enable_darkmode: true
+enable_masonry: false
+enable_math: true
+enable_medium_zoom: true
+
+# -----------------------------------------------------------------------------
+# Exclude/Include
+# -----------------------------------------------------------------------------
+
+# Add any files or folders you'd like Jekyll to ignore
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - node_modules/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+
+# Files/folders to explicitly include
+# include:
+#   - _pages
+#   - _data
+
+# -----------------------------------------------------------------------------
+# Future Enhancements (Uncomment to use)
+# -----------------------------------------------------------------------------
+# serve_og_meta: true
+# og_image: /assets/img/preview.jpg
+# collections:
+#   projects:
+#     output: true
+#     permalink: /:collection/:title/
+# markdown: kramdown
+# highlighter: rouge
+# kramdown:
+#   input: GFM
+
